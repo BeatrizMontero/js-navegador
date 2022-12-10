@@ -1,11 +1,13 @@
 
 const newMovement = document.querySelector("#newMovement")
 const recordsList = document.querySelector("#records")
-const sumIncome = document.querySelector("#entry")
-const sumExpense =  document.querySelector("#spen")
-const totalEntry  = document.querySelector("#totalEntry")
-const totalSpen = document.querySelector("#totalSpen")
-let valueList = []
+let sumIncome = document.querySelector("#entry")
+let sumExpense =  document.querySelector("#spen")
+let saving = document.querySelector("#savings")
+let totalEntry  = document.querySelector("#totalEntry")
+let totalSpen = document.querySelector("#totalSpen")
+let recordList = []
+
 
 
 
@@ -18,6 +20,8 @@ newMovement.addEventListener("submit", event => {
         concept: itemConcept.value,
         amount: parseInt(itemAmount.value),
     };
+    recordList.push(record)
+    console.log(recordList)
     
     
     console.log(record);
@@ -28,21 +32,29 @@ newMovement.addEventListener("submit", event => {
 
    
     drawRecord(record)
-    drawAccounts(record)
+    drawTotals()
     
     //generateRecord(record)
 
 });
 
-function drawAccounts(record){
+function drawTotals(){
+    let expenses = 0
+    let incomes = 0
+    recordList.forEach((record) => {
+        if(record.amount > 0){
+            incomes += parseInt(record.amount)
+        }else{
+            expenses +=parseInt(record.amount)
+        }
+      });
+      
+      
+    totalEntry.innerHTML = `${incomes}`
+    totalSpen.innerHTML = `${expenses}`
+    saving.innerHTML = `${incomes}` - `${expenses}` 
+}
 
-    if(record.amount !== null && record.amount >= 0 ){
-        totalEntry.innerHTML = `${record.amount}`;
-    }else{
-        totalSpen.innerHTML = `${record.amount}`;
-    }
-    
-} 
 
 function deleteRecord(){
      
