@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css"/>
+  <title>Práctica</title>
+</head>
+<body>
+
+<h2>Control de gastos</h2>
+
+<div id="saving">Tu ahorro
+  <p>0.00€</p>
+</div>
+
+<div id="entry">Ingresos
+  <p id="totalEntry" class="green">0,00€</p>
+</div>
+<div id="spen">Gastos
+  <p id="totalSpen" class="red">0,00€</p>
+</div>
+
+
+<ol id="records">Historial <hr>
+</ol>
+
+
+<form id="newMovement" novalidate>
+  <p>Añadir nueva transaccion</p>
+  <hr>
+  <p class="normal">Concepto</p>
+  <input id="concept" type="text" placeholder="Añade un concepto" />
+  <br />
+  <p class="normal">Cantidad</p>
+  <p class="normal">Negativo-gasto, positivo-ingreso</p>
+  <input id="amount" type="number" placeholder="Introduce una cantidad"/>
+  <button id="addRecord" type="submit" >Añade tu transaccion</button>
+</form>
+
+
+ <script src="./index.js"></script>
+</body>
+</html>

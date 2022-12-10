@@ -1,0 +1,53 @@
+/*reseteo styles*/
+body {
+    margin: 0 0 0 0;
+    background-color: hsl(0, 8%, 90%);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif; 
+}
+h2{
+    text-align: center;
+}
+
+#saving{
+    font-size: larger;
+}
+
+#entry{
+    border: solid 1px gray;
+    background-color: rgb(249, 252, 255);
+    margin-top: 1rem;
+    padding-right: 1rem;
+    
+}
+#spen{
+    border: solid 1px gray;
+    background-color: rgb(250, 252, 253);
+    margin-top: 1rem;
+    
+}
+.normal{
+    font-weight: lighter;
+}
+
+
+#newMovement{
+    padding: 1rem;
+}
+
+#addRecord{
+    background-color: rgb(226, 192, 212);
+    height:100%;
+    width:100%;
+    position: relative;
+    margin-top: 2em;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+
+
